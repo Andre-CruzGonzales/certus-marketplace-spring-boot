@@ -5,6 +5,8 @@ public class Producto {
 	private String nombre;
 	private double precio_venta;
 	private char estado_registro;
+	private Categoria categoria;
+	private Marca marca;
 	public int getId() {
 		return id;
 	}
@@ -30,6 +32,5 @@ public class Producto {
 		this.estado_registro = estado_registro;
 	}
 	
-	
-	
+		
 }
