@@ -14,7 +14,7 @@ public class CategoriaController {
 	@Autowired
 	private ICategoriaService categoriaService;
 	@GetMapping("/create")
-	public void create() {
-		
+	public String create() {
+		return "categoria-create";
 	}
 }
