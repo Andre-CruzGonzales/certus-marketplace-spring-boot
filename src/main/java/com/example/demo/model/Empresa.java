@@ -4,14 +4,14 @@ public class Empresa {
 	private int id;
 	private String razonSocial;
 	private String numeroDocumento;
-	private int celular;
+	private String celular;
 	private String direccion;
 	//private Usuario usuario;
 	public Empresa() {
 		
 	}
 	
-	public Empresa(int id, String razonSocial, String numeroDocumento, int celular, String direccion) {
+	public Empresa(int id, String razonSocial, String numeroDocumento, String celular, String direccion) {
 		super();
 		this.id = id;
 		this.razonSocial = razonSocial;
@@ -38,10 +38,10 @@ public class Empresa {
 	public void setNumeroDocumento(String numeroDocumento) {
 		this.numeroDocumento = numeroDocumento;
 	}
-	public int getCelular() {
+	public String getCelular() {
 		return celular;
 	}
-	public void setCelular(int celular) {
+	public void setCelular(String celular) {
 		this.celular = celular;
 	}
 	public String getDireccion() {
@@ -49,6 +49,10 @@ public class Empresa {
 	}
 	public void setDireccion(String direccion) {
 		this.direccion = direccion;
+	}
+	@Override
+	public String toString() {
+		return "Razon Social"+this.razonSocial;
 	}
 	
 }

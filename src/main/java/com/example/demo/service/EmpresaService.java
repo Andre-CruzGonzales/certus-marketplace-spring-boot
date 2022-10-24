@@ -7,11 +7,13 @@ import org.springframework.stereotype.Service;
 import com.example.demo.model.Empresa;
 @Service
 public class EmpresaService implements IEmpresaService {
-
+	private ArrayList<Empresa> empresas = new ArrayList<>();
 	@Override
-	public void create() {
+	public void create(Empresa e) {
+		empresas.add(e);
+		
 		// TODO Auto-generated method stub
-		System.out.println("prueba");
+		
 	}
 
 	@Override
@@ -29,7 +31,7 @@ public class EmpresaService implements IEmpresaService {
 	@Override
 	public ArrayList<Empresa> get() {
 		// TODO Auto-generated method stub
-		return null;
+		return this.empresas;
 	}
 
 }
