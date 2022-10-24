@@ -2,8 +2,10 @@ package com.example.demo.service;
 
 import java.util.ArrayList;
 
-import com.example.demo.model.Empresa;
+import org.springframework.stereotype.Service;
 
+import com.example.demo.model.Empresa;
+@Service
 public class EmpresaService implements IEmpresaService {
 
 	@Override
