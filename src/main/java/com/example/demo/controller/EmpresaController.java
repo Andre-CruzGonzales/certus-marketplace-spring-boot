@@ -14,7 +14,7 @@ public class EmpresaController {
 	@Autowired
 	private IEmpresaService empresaService;
 	@GetMapping("/create")
-	public void create() {
-		
+	public String create() {
+		return "empresa-create";
 	}
 }
