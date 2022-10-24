@@ -17,23 +17,23 @@
             <label class="col-sm-2 col-form-label"
               >Categoria</label></h1>
               <form action="/my-handling-form-page" method="post">
- <ul>
-  <li>
-    <label for="categoria">Categoria:</label>
-    <input type="text" id="categoria">
-  </li>
- </ul>
+ 
+  <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Categoria</label>
+  <input type="cotegoria" class="form-control" id="exampleFormControlInput1" placeholder="Categoria">
+</div>
+  
 </form>
               <p>
               <div class="d-grid gap-2 d-md-block" >
+               
               
               <button type="submit" class="btn btn-primary">Agregar</button>
               <div class="modal" tabindex="-1">
               </div>
+
               
-              
-            <p><table class="table table-bordered border-primary">
-  <thead>
+  <p><table class="table table-striped">
     <tr>
     <th scope="col">id</th>
       <th scope="col">Categoria</th>
@@ -42,6 +42,7 @@
     </tr>
   </thead>
   <tbody>
+  
     <tr>
       <th scope="row">1</th>
       <th scope="row"method="post"></th>
@@ -50,13 +51,34 @@
               </div></td>
       <td><div class="d-grid gap-2 d-md-block">
               <button type="reset" class="btn btn-primary">Borrar</button>
+              
               </div></td>
     </tr>
   </tbody>
 </table>
-<div class="d-grid gap-2 d-md-block">
-              <button type="submit" class="btn btn-primary">Guardar</button>
-              <div class="modal" tabindex="-1">
+<div class="d-grid gap-2 d-md-block"><!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Guardar
+</button>
+</table>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Categoria</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Guardar Categoria 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cerrar</button>
+        <button type="button" class="btn btn-primary">guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
           </div>
         </form>
       </div>

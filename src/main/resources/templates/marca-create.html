@@ -18,12 +18,11 @@
             <label class="col-sm-2 col-form-label"
               >Marca</label></h1>
               <form action="/my-handling-form-page" method="post">
- <ul>
-  <li>
-    <label for="Marca">Categoria:</label>
-    <input type="text" id="marca">
-  </li>
- </ul>
+ <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Marca</label>
+  <input type="marca" class="form-control" id="exampleFormControlInput1" placeholder="Marca">
+</div>
+  
 </form>
               <p>
               <div class="d-grid gap-2 d-md-block" >
@@ -33,7 +32,7 @@
               </div>
               
               
-            <p><table class="table table-bordered border-primary">
+            <p><table class="table table-striped">
   <thead>
     <tr>
     <th scope="col">id</th>
@@ -54,10 +53,29 @@
               </div></td>
     </tr>
   </tbody>
+</table><div class="d-grid gap-2 d-md-block"><!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Guardar
+</button>
 </table>
-<div class="d-grid gap-2 d-md-block">
-              <button type="submit" class="btn btn-primary">Guardar</button>
-              <div class="modal" tabindex="-1">
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Marca</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Guardar Marca 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cerrar</button>
+        <button type="button" class="btn btn-primary">guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
           </div>
         </form>
       </div>
