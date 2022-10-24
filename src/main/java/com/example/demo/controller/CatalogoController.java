@@ -15,8 +15,8 @@ public class CatalogoController {
 	@Autowired
 	private ICatalogoService catalogoService;
 	@GetMapping("/create")
-	public void create() {
-		
+	public String create() {
+		return "catalogo-create";
 	}
 
 }
