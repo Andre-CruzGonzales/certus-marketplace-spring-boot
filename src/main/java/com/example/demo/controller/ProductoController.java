@@ -13,7 +13,7 @@ public class ProductoController {
    @Autowired    
 	private IProductoService productoService;
    @GetMapping("/registroproducto")
-   public void registroproducto() {
-	   
+   public String registroproducto() {
+	   return "producto";
    }
 }
