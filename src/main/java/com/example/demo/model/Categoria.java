@@ -8,7 +8,7 @@ public class Categoria {
 	public Categoria() {
 		
 	}
-	
+	//constructor
 	public Categoria(int id, String categoria, String estado_registro) {
 		super();
 		this.id = id;

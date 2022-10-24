@@ -3,8 +3,6 @@ package com.example.demo.service;
 import java.util.ArrayList;
 
 import org.springframework.stereotype.Service;
-
-import com.example.demo.model.Categoria;
 import com.example.demo.model.Marca;
 
 @Service
