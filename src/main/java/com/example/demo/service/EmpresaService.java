@@ -9,7 +9,7 @@ public class EmpresaService implements IEmpresaService {
 	@Override
 	public void create() {
 		// TODO Auto-generated method stub
-		
+		System.out.println("prueba");
 	}
 
 	@Override
