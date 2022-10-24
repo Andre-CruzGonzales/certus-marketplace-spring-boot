@@ -10,12 +10,14 @@
 	<title>Document</title>
 </head>
 
-<body>
+<body style="background-color:#EEEEEE;">
 	<div class="container mt-5">
-	<a href="/empresa/formCreate" class="btn btn-primary">Nuevo</a>
+		<a href="/empresa/formCreate" class="btn btn-primary mb-5">Nuevo</a>
 		<div class="row">
 			<div th:each="item: ${listaEmpresa}" class="col mb-4">
-				<div class="card" style="width: 18rem;">
+				<div class="card " style="width: 18rem; box-shadow: 8px 9px 13px 0px rgba(0,0,0,0.24);
+-webkit-box-shadow: 8px 9px 13px 0px rgba(0,0,0,0.24);
+-moz-box-shadow: 8px 9px 13px 0px rgba(0,0,0,0.24);">
 					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP-4pftVjuQ3wU1SjbprjjPUbTB5vsBpRIBB2tZpA&s"
 						class="card-img-top" alt="...">
 					<div class="card-body">
@@ -35,7 +37,7 @@
 						<div class="d-flex justify-content-around"><a href="#" class="btn btn-warning">Editar</a>
 							<a href="#" class="btn btn-danger">Eliminar</a>
 						</div>
-						
+
 
 					</div>
 				</div>

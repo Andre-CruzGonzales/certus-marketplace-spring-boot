@@ -1,7 +1,12 @@
 package com.example.demo.model;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
+
 public class Empresa {
 	private int id;
+	@NotEmpty(message = "La razon socuial no debe ser vacio")
+	@Size(min = 3,max = 150)
 	private String razonSocial;
 	private String numeroDocumento;
 	private String celular;
@@ -14,7 +19,9 @@ public class Empresa {
 	public Empresa(int id, String razonSocial, String numeroDocumento, String celular, String direccion) {
 		super();
 		this.id = id;
+		
 		this.razonSocial = razonSocial;
+		
 		this.numeroDocumento = numeroDocumento;
 		this.celular = celular;
 		this.direccion = direccion;
