@@ -73,7 +73,6 @@
   cursor: pointer;
   font-size: 16px;
   margin-top: 30px;
-  
 }
 
 .submitBtn:hover {
@@ -89,7 +88,7 @@
   color: rgb(0, 0, 0);
 }
 .input:focus {
-  border: 2px solid rgb(0, 128, 192);
+  border: 2px solid rgb(0, 64, 128);
 }
 .input:not(:placeholder-shown)+ .label {
   top: -7px;
