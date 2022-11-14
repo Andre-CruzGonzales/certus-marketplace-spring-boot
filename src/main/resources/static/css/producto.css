@@ -2,24 +2,22 @@
 	font-family: "lato", sans-serif;
 }
 body{
-	background-image: url("https://i3w3g8c7.rocketcdn.me/wp-content/uploads/2015/06/ecommerce-1024x516.jpg");
-}
-.body {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  background-color: rgb(255, 255, 255);
-  font-family: "lato", sans-serif;
-  background-image: url("https://i3w3g8c7.rocketcdn.me/wp-content/uploads/2015/06/ecommerce-1024x516.jpg");
+	background-image: url("https://www.ingeniovirtual.com/wp-content/uploads/marketplace-en-ecommerce-1.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
 }
 .signupFrm {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  position: absolute;
+     top: 3%;
+     left: 37%;
+  
 }
 .form {
-  background-color: rgb(138, 197, 255);
+  background-color: rgb(255, 191, 128);
   width: 400px;
   border-radius: 8px;
   padding: 20px 40px;
