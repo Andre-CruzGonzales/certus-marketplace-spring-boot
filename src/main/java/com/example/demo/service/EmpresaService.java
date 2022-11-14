@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.example.demo.interfaces.IEmpresa;
 import com.example.demo.model.Empresa;
+import com.example.demo.model.Response;
 @Service
 public class EmpresaService implements IEmpresaService {
 	@Autowired
@@ -38,10 +39,23 @@ public class EmpresaService implements IEmpresaService {
 	}
 
 	@Override
-	public ArrayList<Empresa> get() {
+	public Response<Empresa> get() {
 		// TODO Auto-generated method stub
 		//return this.empresas;
-		return (ArrayList<Empresa>)empresaRepository.findAll();
+		Response<Empresa> response= new Response<>();
+		try {
+			response.setList( (ArrayList<Empresa>)empresaRepository.findAll());
+			response.setStatus(true);
+			response.setMsg("Listado Correctamente");
+			response.setMsgError("");
+		} catch (Exception e) {
+			
+			response.setStatus(false);
+			response.setMsg("Ocurrio un error");
+			response.setMsgError(e.getStackTrace().toString());
+			// TODO: handle exception
+		}
+		return response;
 	}
 
 	@Override

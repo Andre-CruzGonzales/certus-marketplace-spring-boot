@@ -53,7 +53,7 @@ public class EmpresaController {
 	
 	@GetMapping("/list")
 	public String get(Model model) {
-		model.addAttribute("listaEmpresa", empresaService.get());
+		model.addAttribute("listaEmpresa", empresaService.get().getList());
 		return "empresa-list";
 	}
 	
