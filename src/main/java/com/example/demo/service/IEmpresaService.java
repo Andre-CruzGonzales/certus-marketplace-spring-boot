@@ -6,10 +6,8 @@ import java.util.Optional;
 import com.example.demo.model.Empresa;
 
 public interface IEmpresaService {
-	public boolean create(Empresa e);
-	public void update();
-	public Optional<Empresa> getId(int id);
 	public ArrayList<Empresa> get();
-	public boolean editar(Empresa e);
+	public boolean create(Empresa e);
+	public Optional<Empresa> getId(int id);
 	public void delete(int id);
 }

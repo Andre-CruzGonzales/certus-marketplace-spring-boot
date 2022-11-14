@@ -24,6 +24,8 @@
 				
 				
 				<form th:action="@{/empresa/create}" th:object="${empresa}" method="post">
+					<input class="form-control" type="hidden"
+								name="id" th:field="*{id}">
 					<div class="mb-3 row">
 						<label for="inputPassword" class="col-sm-2 col-form-label">número de documento</label>
 						<div class="col-sm-10">

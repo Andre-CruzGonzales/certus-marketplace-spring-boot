@@ -16,9 +16,9 @@ public class EmpresaService implements IEmpresaService {
 	@Override
 	public boolean create(Empresa e) {
 		//empresas.add(e);
-		Empresa emp = new Empresa();
-		emp =empresaRepository.save(e);
-		if(emp.getId()>0) {
+		
+		Empresa emp =empresaRepository.save(e);
+		if(!emp.equals(null)) {
 			return true;
 		}
 		return false;
@@ -28,18 +28,13 @@ public class EmpresaService implements IEmpresaService {
 	}
 
 	@Override
-	public void update() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public Optional<Empresa> getId(int id) {
 		// TODO Auto-generated method stub
-		Optional<Empresa> e = Optional.empty();
+		//Optional<Empresa> e = Optional.empty();
 		
-		e = empresaRepository.findById(id);
-		return e;
+		//e = empresaRepository.findById(id);
+		//return e;
+		return empresaRepository.findById(id);
 	}
 
 	@Override
@@ -47,13 +42,6 @@ public class EmpresaService implements IEmpresaService {
 		// TODO Auto-generated method stub
 		//return this.empresas;
 		return (ArrayList<Empresa>)empresaRepository.findAll();
-	}
-
-	@Override
-	public boolean editar(Empresa e) {
-		// TODO Auto-generated method stub
-		return false;
-		
 	}
 
 	@Override

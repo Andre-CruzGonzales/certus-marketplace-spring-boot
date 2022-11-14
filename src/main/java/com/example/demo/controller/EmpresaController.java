@@ -44,7 +44,7 @@ public class EmpresaController {
 		//	return "empresa-list";
 		
 		status.setComplete();
-		return "empresa-list";
+		return "redirect:/empresa/list";
 		
 //		System.out.println(e);
 		
@@ -59,7 +59,7 @@ public class EmpresaController {
 	
 	
 	@GetMapping("/editar/{id}")
-	public String toggleEditar(@PathVariable int id, Model model) {
+	public String editar(@PathVariable int id, Model model) {
 		Optional<Empresa> e = empresaService.getId(id);
 		
 		model.addAttribute("empresa",e);
