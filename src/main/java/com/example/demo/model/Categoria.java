@@ -1,5 +1,6 @@
 package com.example.demo.model;
 
+
 public class Categoria {
 	private int id;
 	private String categoria;

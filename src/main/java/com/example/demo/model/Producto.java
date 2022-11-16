@@ -1,36 +1,76 @@
 package com.example.demo.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Producto {
-	private int id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	@Column(nullable = false, length = 60)
 	private String nombre;
-	private double precio_venta;
-	private char estado_registro;
-	private Categoria categoria;
-	private Marca marca;
-	public int getId() {
+	@Column(nullable = false, length = 60)
+	private String marca;
+	@Column(nullable = false, length = 60)
+	private String hechoEn;
+	@Column(nullable = false)
+	private float precio;
+
+	public Producto() {
+		super();
+	}
+
+	public Producto(Long id, String nombre, String marca, String hechoEn, float precio) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+		this.marca = marca;
+		this.hechoEn = hechoEn;
+		this.precio = precio;
+	}
+
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+
+	public void setId(Long id) {
 		this.id = id;
 	}
+
 	public String getNombre() {
 		return nombre;
 	}
+
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public double getPrecio_venta() {
-		return precio_venta;
+
+	public String getMarca() {
+		return marca;
 	}
-	public void setPrecio_venta(double precio_venta) {
-		this.precio_venta = precio_venta;
+
+	public void setMarca(String marca) {
+		this.marca = marca;
 	}
-	public char getEstado_registro() {
-		return estado_registro;
+
+	public String getHechoEn() {
+		return hechoEn;
 	}
-	public void setEstado_registro(char estado_registro) {
-		this.estado_registro = estado_registro;
+
+	public void setHechoEn(String hechoEn) {
+		this.hechoEn = hechoEn;
 	}
-	
-		
+
+	public float getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(float precio) {
+		this.precio = precio;
+	}
+
 }
