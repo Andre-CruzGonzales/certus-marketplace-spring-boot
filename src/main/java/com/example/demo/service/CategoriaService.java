@@ -1,16 +1,25 @@
 package com.example.demo.service;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.model.Categoria;
+import com.example.demo.entity.Categoria;
+import com.example.demo.repository.CategoriaRepository;
 @Service
+@Transactional
 public class CategoriaService implements ICategoriaService {
+	@Autowired
+	CategoriaRepository categoriaRepository;
 	
 	@Override
-	public void create() {
-		// TODO Auto-generated method stub
+	public void create(Categoria categoria) {
+		categoriaRepository.save(categoria);
 		
 	}
 
@@ -21,15 +30,19 @@ public class CategoriaService implements ICategoriaService {
 	}
 
 	@Override
-	public Categoria getId(int id) {
+	public Optional<Categoria> getId(int id) {
 		// TODO Auto-generated method stub
-		return null;
+		return categoriaRepository.findById(id);
 	}
 
 	@Override
-	public ArrayList<Categoria> get() {
+	public List<Categoria> get() {
 		// TODO Auto-generated method stub
-		return null;
+
+		return categoriaRepository.findAll();
+	}
+	public void delete(int id) {
+		categoriaRepository.deleteById(id);
 	}
 
 

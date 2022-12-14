@@ -6,9 +6,9 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.demo.entity.Empresa;
+import com.example.demo.entity.Response;
 import com.example.demo.interfaces.IEmpresa;
-import com.example.demo.model.Empresa;
-import com.example.demo.model.Response;
 @Service
 public class EmpresaService implements IEmpresaService {
 	@Autowired

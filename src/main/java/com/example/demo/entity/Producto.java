@@ -1,10 +1,13 @@
-package com.example.demo.model;
+package com.example.demo.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Producto {
@@ -19,7 +22,11 @@ public class Producto {
 	private String hechoEn;
 	@Column(nullable = false)
 	private float precio;
-
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name="categoria_id",nullable = true)
+	private Categoria categoriaId;
+	@Column(nullable = true)
+	private String publicado;
 	public Producto() {
 		super();
 	}

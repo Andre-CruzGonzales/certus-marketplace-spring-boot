@@ -5,42 +5,42 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.example.demo.model.Producto;
+import com.example.demo.entity.Producto;
 import com.example.demo.service.ProductoServicio;
 
-@Controller
+@RestController
+@RequestMapping("producto")
 public class ProductoControlador {
 	
 	@Autowired
 	private ProductoServicio productoServicio;
 	
-	@RequestMapping("/")
+	@GetMapping("/get")
 	public String verPaginaDeInicio(Model modelo) {
 		List<Producto> listaProductos = productoServicio.listAll();
 		modelo.addAttribute("listaProductos", listaProductos);
 		return "index";
 	}
 	
-	@RequestMapping("/nuevo")
-	public String mostrarFormularioDeRegistrarProducto(Model modelo) {
-		Producto producto =new Producto();
-		modelo.addAttribute("producto", producto);
-		return "nuevo_producto";
-	}
 	
-	@RequestMapping(value = "/guardar", method = RequestMethod.POST)
+	
+	@PostMapping(value = "/create")
 	public String guardarProducto(@ModelAttribute("producto")Producto producto) {
 		productoServicio.save(producto);
 		return "redirect:/";
 	}
 	
-	@RequestMapping("/editar/{id}")
+	@PutMapping("/editar/{id}")
 	public ModelAndView mostrarFormularioDeEditarProducto(@PathVariable(name = "id") Long id) {
 		ModelAndView modelo = new ModelAndView("editar_producto");
 		

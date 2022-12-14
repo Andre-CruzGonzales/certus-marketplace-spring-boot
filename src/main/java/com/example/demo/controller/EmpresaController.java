@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.support.SessionStatus;
 
-import com.example.demo.model.Empresa;
+import com.example.demo.entity.Empresa;
 import com.example.demo.service.IEmpresaService;
 
 

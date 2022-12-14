@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="/css/bootstrap.min.css" rel="stylesheet" />
+	<script src="/js/bootstrap.bundle.min.js"></script>
+	<title>Empresa Create</title>
+</head>
+
+<body style="background-color:#EEEEEE;">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="/">Control de Empresa</a>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item"><a class="nav-link" href="/nuevo">Agregar producto</a></li>
+				<li class="nav-item"><a class="nav-link" href="/empresa/list">Empresa</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container">
+		<div th:if="${error == true}" class="mt-5 alert alert-danger alert-dismissible fade show" role="alert">
+			<strong>Error</strong> Debes Ingresar la razon social de la empresa
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>
+		<div class="mt-4 d-flex justify-content-center">
+			<div class="card p-5" style="width:55rem;box-shadow: 8px 9px 13px 0px rgba(0,0,0,0.24);
+-webkit-box-shadow: 8px 9px 13px 0px rgba(0,0,0,0.24);
+-moz-box-shadow: 8px 9px 13px 0px rgba(0,0,0,0.24);">
+				<h1 class="text-center mb-5">Crear Empresa</h1>
+				
+				
+				<form th:action="@{/empresa/create}" th:object="${empresa}" method="post">
+					<input class="form-control" type="hidden"
+								name="id" th:field="*{id}">
+					<div class="mb-3 row">
+						<label for="inputPassword" class="col-sm-2 col-form-label">número de documento</label>
+						<div class="col-sm-10">
+							<input class="form-control" type="text" placeholder="Número de documento"
+								name="numeroDocumento" th:field="*{numeroDocumento}">
+						</div>
+					</div>
+					<div class="mb-3 row">
+						<label for="inputPassword" class="col-sm-2 col-form-label">Razón de Social</label>
+						<div class="col-sm-10">
+							<input class="form-control" type="text" placeholder="Razón Social" name="razonSocial" th:field="*{razonSocial}">
+						</div>
+					</div>
+					<div class="mb-3 row">
+						<label for="inputPassword" class="col-sm-2 col-form-label">Celular</label>
+						<div class="col-sm-10">
+							<input class="form-control" type="text" placeholder="Celular" name="celular" th:field="*{celular}">
+						</div>
+					</div>
+					<div class="mb-3 row">
+						<label for="inputPassword" class="col-sm-2 col-form-label">Dirección</label>
+						<div class="col-sm-10">
+							<input class="form-control" type="text" placeholder="Direccion" name="direccion" th:field="*{direccion}">
+						</div>
+					</div>
+					<div class="d-flex justify-content-center"><button type="submit"
+							class="btn btn-success">Guardar</button></div>
+
+				</form>
+			</div>
+
+		</div>
+	</div>
+</body>
+
+</html>

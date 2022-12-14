@@ -2,7 +2,7 @@ package com.example.demo.service;
 
 import java.util.ArrayList;
 
-import com.example.demo.model.Catalogo;
+import com.example.demo.entity.Catalogo;
 
 
 

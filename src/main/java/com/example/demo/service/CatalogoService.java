@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import org.springframework.stereotype.Service;
 
-import com.example.demo.model.Catalogo;
+import com.example.demo.entity.Catalogo;
 
 	
 	@Service

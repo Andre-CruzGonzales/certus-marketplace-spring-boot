@@ -1,52 +1,49 @@
-package com.example.demo.model;
+package com.example.demo.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 
-public class Categoria {
+public class Marca {
 	private int id;
-	private String categoria;
+	private String marca;
 	private String estado_registro;
 	
-	public Categoria() {
+    public Marca() {
 		
 	}
-	
-	public Categoria(int id, String categoria, String estado_registro) {
+
+	public Marca(int id, String marca, String estado_registro) {
 		super();
 		this.id = id;
-		this.categoria = categoria;
+		this.marca = marca;
 		this.estado_registro = estado_registro;
 	}
-
 
 	public int getId() {
 		return id;
 	}
 
-
 	public void setId(int id) {
 		this.id = id;
 	}
 
-
-	public String getCategoria() {
-		return categoria;
+	public String getMarca() {
+		return marca;
 	}
 
-
-	public void setCategoria(String categoria) {
-		this.categoria = categoria;
+	public void setMarca(String marca) {
+		this.marca = marca;
 	}
-
 
 	public String getEstado_registro() {
 		return estado_registro;
 	}
 
-
 	public void setEstado_registro(String estado_registro) {
 		this.estado_registro = estado_registro;
 	}
-	
+    
 	
 
 }
